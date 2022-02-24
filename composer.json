@@ -1,5 +1,5 @@
 {
-    "name": "zcell/TRUE-CORE",
+    "name": "vttrue/true-core",
     "require": {
         "php": ">=7.4.0",
         "illuminate/events": "^8.0",

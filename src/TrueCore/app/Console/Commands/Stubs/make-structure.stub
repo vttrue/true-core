@@ -1,0 +1,23 @@
+<?php
+
+namespace {{ namespace }};
+
+use TrueCore\App\Services\Structure;
+
+/**
+ * Class {{ class }}
+ *
+ * @package {{ namespace }}
+ */
+class {{ class }} extends Structure
+{
+    /**
+     * {{ class }} constructor.
+     *
+     * @param {{ repositoryClass }} $repository
+     */
+    public function __construct({{ repositoryClass }} $repository)
+    {
+        parent::__construct($repository);
+    }
+}

@@ -1,0 +1,23 @@
+<?php
+
+namespace {{ namespace }};
+
+use TrueCore\App\Services\Factory;
+use {{ modelClass }} as {{ modelAlias }};
+
+/**
+ * Class {{ class }}
+ *
+ * @package {{ namespace }}
+ */
+class {{ class }} extends Factory
+{
+    /**
+     * @return {{ serviceClass }}
+     * @throws \Exception
+     */
+    public function create()
+    {
+        return new {{ serviceClass }}(new {{ repositoryClass }}(new {{ modelAlias }}), $this, new {{ observerClass }});
+    }
+}

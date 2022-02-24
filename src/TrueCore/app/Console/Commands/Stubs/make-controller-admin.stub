@@ -1,0 +1,28 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ baseAdminControllerClass }} as AdminController;
+use {{ formResourceClass }};
+use {{ listResourceClass }};
+use {{ storeRequestClass }};
+use {{ updateRequestClass }};
+use {{ serviceClass }} as {{ serviceAlias }};
+
+class {{ class }} extends AdminController
+{
+    public function __construct({{ serviceAlias }} $service)
+    {
+       parent::__construct($service, {{ listResourceAlias }}::class, {{ formResourceAlias }}::class, '', {{ storeRequestAlias }}::class, {{ updateRequestAlias }}::class);
+    }
+
+    /**
+    * @param array $input
+    *
+    * @return array
+    */
+    protected function processInput(array $input): array
+    {
+        return $input;
+    }
+}

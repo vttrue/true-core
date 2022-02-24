@@ -1,0 +1,36 @@
+<?php
+
+namespace {{ namespace }};
+
+use TrueCore\App\Http\Resources\Api\Traits\Adjustable;
+
+use Illuminate\Http\Resources\Json\JsonResource;
+
+/**
+ * Class {{ class }}
+ *
+ * @package {{ namespace }}
+ */
+class {{ class }} extends JsonResource
+{
+    use Adjustable;
+
+    /**
+     * @param \Illuminate\Http\Request $request
+     *
+     * @return array
+     */
+    public function toArray($request)
+    {
+        $result = [];
+
+        /* @var {{ structureClass }}[] $items */
+        $items = $this->resource;
+
+        foreach ($items AS $item) {
+            $result[] = $item->toArray();
+        }
+
+        return $result;
+    }
+}

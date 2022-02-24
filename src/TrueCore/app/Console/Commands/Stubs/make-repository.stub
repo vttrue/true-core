@@ -1,0 +1,39 @@
+<?php
+
+namespace {{ namespace }};
+
+use TrueCore\App\Services\Repository;
+use {{ modelClass }} as {{ modelAlias }};
+
+/**
+ * Class {{ class }}
+ *
+ * @method {{ modelAlias }} getModel()
+ *
+ * @package {{ namespace }}
+ */
+class {{ class }} extends Repository
+{
+    /**
+     * {{ class }} constructor.
+     *
+     * @param {{ modelAlias }} $model
+     */
+    public function __construct({{ modelAlias }} $model)
+    {
+        parent::__construct($model);
+    }
+
+    protected function processModification(array $data = []): void
+    {
+        //
+    }
+
+    /**
+    * @return array
+    */
+    protected function getDataStructure(): array
+    {
+        return [];
+    }
+}

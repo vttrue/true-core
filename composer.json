@@ -1,0 +1,62 @@
+{
+    "name": "zcell/TRUE-CORE",
+    "require": {
+        "php": ">=7.4.0",
+        "illuminate/events": "^8.0",
+        "illuminate/database": "^8.0",
+        "illuminate/queue": "^8.0",
+        "illuminate/console": "^8.0",
+        "illuminate/http": "^8.0",
+        "illuminate/validation": "^8.0",
+        "illuminate/routing": "^8.0",
+        "illuminate/auth": "^8.0",
+        "predis/predis": "^1.1",
+        "hhxsv5/php-multi-curl": "~1.0",
+        "laracademy/generators": "^2.3",
+        "laravel/passport": "^10.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "illuminate/events": "^8.0",
+        "illuminate/database": "^8.0",
+        "illuminate/queue": "^8.0",
+        "illuminate/console": "^8.0",
+        "illuminate/http": "^8.0",
+        "illuminate/validation": "^8.0",
+        "illuminate/routing": "^8.0",
+        "illuminate/auth": "^8.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TrueCore\\App\\Providers\\CommandServiceProvider",
+                "TrueCore\\App\\Providers\\MigrationsServiceProvider",
+                "TrueCore\\App\\Providers\\AuthServiceProvider",
+                "TrueCore\\App\\Providers\\SeedServiceProvider",
+                "TrueCore\\App\\Providers\\ConfigServiceProvider",
+                "TrueCore\\App\\Providers\\RouteServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Deprecator",
+            "email": "foart3hlulz@gmail.com"
+        },
+        {
+            "name": "Incarnator",
+            "email": "a.shubnikov@true-studio.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TrueCore\\": "src/TrueCore/",
+            "TrueCore\\App\\": "src/TrueCore/app/",
+            "TrueCore\\Tests\\": "src/TrueCore/tests/"
+        },
+        "files": [
+            "src/TrueCore/app/Helper.php"
+        ]
+    },
+    "minimum-stability": "stable"
+}

@@ -1,0 +1,75 @@
+<?php
+
+namespace {{ namespace }};
+
+use TrueCore\App\Services\Service;
+
+/**
+ * Class {{ class }}
+ *
+ * @method {{ repositoryClass }} getRepository()
+ *
+ * @method static {{ structureClass }}[] mapList(array $items, ?array $fields = null)
+ * @method {{ structureClass }} mapDetail(?array $fields = null)
+ *
+ * @method static {{ class }}|null add(array $data)
+ *
+ * @method static {{ class }}|null getOne(array $conditions = [], array $options = [])
+ * @method static {{ class }}[] getAll(array $options = [], array $columns = ['*'])
+ * @method static {{ class }}[] getRandom(array $conditions = [], array $options = [])
+ *
+ * @package {{ namespace }}
+ */
+class {{ class }} extends Service
+{
+    /**
+     * {{ class }} constructor.
+     *
+     * @param {{ repositoryClass }}|null $repository
+     * @param {{ factoryClass }}|null $factory
+     * @param {{ observerClass }}|null $observer
+     *
+     * @throws \Exception
+     */
+    public function __construct({{ repositoryClass }} $repository = null, {{ factoryClass }} $factory = null, {{ observerClass }} $observer = null)
+    {
+        parent::__construct($repository, $factory, $observer);
+    }
+
+    /**
+     * @param array $data
+     * @return array
+     * @throws \Exception
+     */
+    protected function normalizeData(array $data): array
+    {
+        return $data;
+    }
+
+    /**
+     * @param array $data
+     * @throws \Exception
+     */
+    protected function postProcessor(array $data): void
+    {
+        //
+    }
+
+    /**
+     * @param bool $soft
+     * @return bool
+     * @throws \TrueCore\App\Services\Traits\Exceptions\ModelDeleteException
+     */
+    public function delete(bool $soft = false): bool
+    {
+        return $this->getRepository()->delete($soft);
+    }
+
+    /**
+     * @return {{ structureClass }}
+     */
+    protected function getStructureInstance(): {{ structureClass }}
+    {
+        return new {{ structureClass }}($this->getRepository());
+    }
+}

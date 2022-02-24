@@ -1,0 +1,25 @@
+<?php
+
+namespace {{ namespace }};
+
+use TrueCore\App\Services\Observer;
+
+/**
+ * Class {{ class }}
+ *
+ * @package {{ namespace }}
+ */
+class {{ class }} extends Observer
+{
+    protected $data = [];
+
+    /**
+     * {{ class }} constructor.
+     *
+     * @param array $data
+     */
+    public function __construct(array $data = [])
+    {
+        $this->data = $data;
+    }
+}
